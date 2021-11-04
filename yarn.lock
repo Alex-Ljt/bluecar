@@ -1359,6 +1359,13 @@
   resolved "https://registry.npm.taobao.org/@types/strip-json-comments/download/@types/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
   integrity sha1-mqMMBNshKpoGSdaub9UKzMQHSKE=
 
+"@types/svg-sprite-loader@^3.9.4":
+  version "3.9.4"
+  resolved "https://registry.nlark.com/@types/svg-sprite-loader/download/@types/svg-sprite-loader-3.9.4.tgz?cache=0&sync_timestamp=1629709332332&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fsvg-sprite-loader%2Fdownload%2F%40types%2Fsvg-sprite-loader-3.9.4.tgz#38f39960bbbe7876c6d861c06a7ed80e4a61edef"
+  integrity sha1-OPOZYLu+eHbG2GHAan7YDkph7e8=
+  dependencies:
+    "@types/webpack" "^4"
+
 "@types/tapable@^1":
   version "1.0.8"
   resolved "https://registry.nlark.com/@types/tapable/download/@types/tapable-1.0.8.tgz?cache=0&sync_timestamp=1629709492234&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Ftapable%2Fdownload%2F%40types%2Ftapable-1.0.8.tgz#b94a4391c85666c7b73299fd3ad79d4faa435310"
