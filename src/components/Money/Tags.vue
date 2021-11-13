@@ -16,12 +16,10 @@
 <script lang="ts">
 import Vue from 'vue';
 import {Component, Prop} from 'vue-property-decorator';
-
 @Component
 export default class Tags extends Vue {
   @Prop() readonly dataSource: string[] | undefined;
   selectedTags: string[] = [];
-
   toggle(tag: string) {
     const index = this.selectedTags.indexOf(tag);
     if (index >= 0) {
@@ -29,9 +27,8 @@ export default class Tags extends Vue {
     } else {
       this.selectedTags.push(tag);
     }
-    this.$emit('xxx',this.selectedTags)
+    this.$emit('update:value', this.selectedTags);
   }
-
   create() {
     const name = window.prompt('请输入标签名');
     if (name === '') {
@@ -41,12 +38,12 @@ export default class Tags extends Vue {
           [...this.dataSource, name]);
     }
   }
-
 }
 </script>
 
 <style lang="scss" scoped>
 .tags {
+  background: white;
   font-size: 14px;
   padding: 16px;
   flex-grow: 1;
