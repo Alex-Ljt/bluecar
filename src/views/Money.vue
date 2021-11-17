@@ -20,21 +20,18 @@ import FormItem from '@/components/Money/FormItem.vue';
 import Tags from '@/components/Money/Tags.vue';
 import {Component} from 'vue-property-decorator';
 
-
 @Component({
   components: {Tags, FormItem, Types, NumberPad},
-  computed:{
-    recordList(){
-      return this.$store.state.recordList;
-    }
-  }
 })
 export default class Money extends Vue {
+  get recordList() {
+    return this.$store.state.recordList;
+  }
   record: RecordItem = {
     tags: [], notes: '', type: '-', amount: 0
   };
   created(){
-    this.$store.commit('fetchRecords')
+    this.$store.commit('fetchRecords');
   }
   onUpdateNotes(value: string) {
     this.record.notes = value;
