@@ -4,13 +4,8 @@ import clone from '@/lib/clone';
 import createId from '@/lib/createId';
 import router from '@/router';
 
-Vue.use(Vuex)//把 store 绑到 Vue.prototype.$store = store
+Vue.use(Vuex);//把 store 绑到 Vue.prototype.$store = store
 
-type RootState = {
-  recordList: RecordItem[],
-  tagList: Tag[],
-  currentTag?: Tag
-}
 const store = new Vuex.Store({
   state: {//data
     recordList: [],
@@ -57,7 +52,7 @@ const store = new Vuex.Store({
     },
     createRecord(state, record) {
       const record2: RecordItem = clone(record);
-      record2.createdAt = new Date();
+      record2.createdAt = new Date().toISOString();
       state.recordList.push(record2);
       store.commit('saveRecords');
     },
@@ -85,7 +80,4 @@ const store = new Vuex.Store({
 });
 
 export default store;
-
-
-
 
