@@ -1,4 +1,4 @@
-<template>
+<<template>
   <div class="tags">
     <div class="new">
       <button @click="createTag">新增标签</button>
@@ -15,18 +15,16 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {Component} from 'vue-property-decorator';
+import {Component, Prop} from 'vue-property-decorator';
 import {mixins} from 'vue-class-component';
 import TagHelper from '@/mixins/TagHelper';
-
 @Component
 export default class Tags extends mixins(TagHelper) {
   selectedTags: string[] = [];
-
-  tagList(){
+  get tagList() {
     return this.$store.state.tagList;
   }
-  created(){
+  created() {
     this.$store.commit('fetchTags');
   }
   toggle(tag: string) {
@@ -53,7 +51,7 @@ export default class Tags extends mixins(TagHelper) {
     display: flex;
     flex-wrap: wrap;
     > li {
-      $bg: #d9d9d9;
+      $bg: #D9D9D9;
       background: $bg;
       $h: 24px;
       height: $h;

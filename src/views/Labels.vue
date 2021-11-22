@@ -69,5 +69,3 @@ export default class Labels extends mixins(TagHelper) {
   }
 }
 </style>
-
-
