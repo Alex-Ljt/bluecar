@@ -40,7 +40,9 @@ export default class Statistics extends Vue {
         tags.map(t => t.name).join('，');
   }
   mounted() {
-    (this.$refs.chartWrapper as HTMLDivElement).scrollLeft = 9999;
+    const div = (this.$refs.chartWrapper as HTMLDivElement);
+    console.log(div.scrollWidth);
+    div.scrollLeft = div.scrollWidth;
   }
   beautify(string: string) {
     const day = dayjs(string);
